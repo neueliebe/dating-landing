@@ -1,10 +1,14 @@
+FINAL ABSOLUTE VERSION
 
-ANLEITUNG
+✔ SEO optimiert
+✔ OpenGraph integriert
+✔ Trust-Line hinzugefügt
+✔ Premium Dark Design
+✔ Desktop 4-Spalten Layout
+✔ Animationen & Blur Effekt
 
-1) Ersetze YOUR_PARTNER_LINK im index.html durch deine Partner-URL.
-2) Füge deine AI-Bilder in den Ordner /images/ ein.
-3) Benenne sie: IMAGE1.jpg bis IMAGE6.jpg
-4) Lade alle Dateien auf GitHub Pages oder Pages Drop hoch.
-5) Fertig.
-
-Empfohlen: GitHub Pages für maximale Stabilität.
+Anleitung:
+1) YOUR_PARTNER_LINK ersetzen
+2) IMAGE1.jpg bis IMAGE8.jpg in /images/ einfügen
+3) Optional favicon.ico hinzufügen
+4) Alles auf GitHub hochladen
