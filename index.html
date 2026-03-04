@@ -329,7 +329,7 @@ window.addEventListener("load", revealCards);
 </script>
   <script>
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
 const container = document.querySelector(".profiles");
 const cards = Array.from(container.children);
@@ -343,6 +343,7 @@ cards.forEach(card => container.appendChild(card));
 </script>
 </body>
 </html>
+
 
 
 
