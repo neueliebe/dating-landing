@@ -341,8 +341,24 @@ cards.forEach(card => container.appendChild(card));
 });
 
 </script>
+  <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const firstCard = document.querySelector(".card");
+
+const badge = document.createElement("div");
+badge.className = "card-badge";
+badge.innerText = "🔥 Heute aktiv";
+
+firstCard.appendChild(badge);
+
+});
+
+</script>
 </body>
 </html>
+
 
 
 
