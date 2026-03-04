@@ -329,17 +329,21 @@ window.addEventListener("load", revealCards);
 </script>
   <script>
 
-const container = document.querySelector(".profiles");
+window.addEventListener("load", () => {
 
+const container = document.querySelector(".profiles");
 const cards = Array.from(container.children);
 
 cards.sort(() => Math.random() - 0.5);
 
 cards.forEach(card => container.appendChild(card));
 
+});
+
 </script>
 </body>
 </html>
+
 
 
 
