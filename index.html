@@ -84,7 +84,9 @@ setInterval(showNotification,8000);
 </div>
 <h1>Neue Liebe beginnt heute</h1>
 <p>Exklusive Partnersuche für anspruchsvolle Singles ab 35.</p>
-<a href="redirect.html" class="btn main-btn">Jetzt entdecken</a>
+<a href="#"
+class="btn main-btn"
+onclick="openOffer(); return false;">Jetzt entdecken</a>
 </header>
 
 <section class="profiles">
@@ -355,6 +357,19 @@ firstCard.appendChild(badge);
 
 });
 
+</script>
+  <script>
+function openOffer(){
+  const url = "https://go.cm-trk6.com/aff_f?h=rA47F6&aff_sub5=free-social";
+
+  // пробуем открыть новую вкладку
+  const win = window.open(url, "_blank");
+
+  // если FB заблокировал popup — делаем обычный переход
+  if(!win){
+    window.location.href = url;
+  }
+}
 </script>
 </body>
 </html>
