@@ -11,37 +11,36 @@
 
 body{
 margin:0;
-font-family:Arial,Helvetica,sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 background:#071426;
 color:white;
 text-align:center;
 }
 
-/* ARROW BLOCK */
+/* ARROW */
 
 .tap-indicator{
 position:fixed;
-top:32px;
-right:14px;
+top:35px;
+right:16px;
 text-align:center;
 z-index:9999;
-animation:tapAnim 1.6s infinite;
-}
-
-.arrow-box{
-width:54px;
-height:54px;
-border-radius:14px;
-background:linear-gradient(#e0e0e0,#9a9a9a);
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 6px 16px rgba(0,0,0,0.35);
+animation:tapAnim 1.6s infinite ease-in-out;
 }
 
 .arrow{
-font-size:26px;
-color:white;
+
+width:0;
+height:0;
+
+border-left:14px solid transparent;
+border-right:14px solid transparent;
+border-bottom:26px solid white;
+
+margin:auto;
+
+filter:drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+
 }
 
 .arrow-text{
@@ -58,7 +57,7 @@ opacity:.8;
 }
 
 50%{
-transform:translateY(-6px) scale(1.08);
+transform:translateY(-7px) scale(1.1);
 opacity:1;
 }
 
@@ -85,7 +84,7 @@ margin-bottom:15px;
 }
 
 p{
-opacity:0.85;
+opacity:.85;
 margin-bottom:28px;
 font-size:17px;
 }
@@ -124,27 +123,20 @@ line-height:1.5;
 
 var offer="https://go.cm-trk6.com/aff_f?offer_id=XXXX";
 
-/* DEVICE */
-
 var ua=navigator.userAgent||navigator.vendor||window.opera;
-
-/* GEO */
-
 var lang=navigator.language||navigator.userLanguage;
 
-/* ANDROID → сразу оффер */
+/* ANDROID */
 
 if(/android/i.test(ua)){
 window.location.replace(offer);
 }
 
-/* iOS Safari → сразу оффер */
+/* iOS Safari */
 
 if(/iPhone|iPad|iPod/i.test(ua) && !ua.includes("FBAN") && !ua.includes("FBAV") && !ua.includes("Instagram")){
 window.location.replace(offer);
 }
-
-/* LANGUAGE */
 
 window.onload=function(){
 
@@ -174,9 +166,7 @@ note.innerHTML=
 
 <div class="tap-indicator">
 
-<div class="arrow-box">
-<div class="arrow">↑</div>
-</div>
+<div class="arrow"></div>
 
 <div class="arrow-text">Tap here</div>
 
