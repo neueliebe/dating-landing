@@ -4,30 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Loading...</title>
-
-<script>
-
-setTimeout(function(){
-
-window.location.href="https://go.cm-trk6.com/aff_f?h=rA47F6&aff_sub5=free-social";
-
-},1200);
-
-</script>
+<title>Profiles</title>
 
 <style>
 
 body{
 margin:0;
+font-family:Arial, sans-serif;
 background:#0f172a;
 color:white;
-font-family:Arial;
 display:flex;
 align-items:center;
 justify-content:center;
 height:100vh;
 text-align:center;
+}
+
+.box{
+max-width:420px;
+padding:30px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:16px 28px;
+border-radius:14px;
+background:linear-gradient(45deg,#ec4899,#f43f5e);
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+box-shadow:0 10px 30px rgba(236,72,153,.4);
+}
+
+.tip{
+margin-top:20px;
+font-size:14px;
+color:#94a3b8;
 }
 
 </style>
@@ -36,12 +50,46 @@ text-align:center;
 
 <body>
 
-<div>
+<div class="box">
 
-<h2>Profile werden geladen...</h2>
-<p>Bitte warten...</p>
+<h2 id="title">Neue Profile gefunden 🔥</h2>
+
+<p id="text">Klicken Sie unten um die Profile zu sehen.</p>
+
+<a href="https://go.cm-trk6.com/aff_f?h=rA47F6&aff_sub5=free-social" class="btn" id="btn">
+Profile ansehen
+</a>
+
+<p class="tip" id="tip">
+Falls sich die Profile nicht öffnen,<br>
+tippen Sie oben rechts auf <b>•••</b><br>
+und wählen Sie <b>"Im Browser öffnen"</b>.
+</p>
 
 </div>
+
+<script>
+
+fetch("https://ipapi.co/json/")
+.then(res => res.json())
+.then(data => {
+
+const country = data.country;
+
+if(country !== "DE" && country !== "AT" && country !== "CH"){
+
+document.getElementById("title").innerText = "New profiles found 🔥";
+document.getElementById("text").innerText = "Click below to see the profiles.";
+document.getElementById("btn").innerText = "View profiles";
+
+document.getElementById("tip").innerHTML =
+'If profiles do not open,<br>tap <b>•••</b> in the top right<br>and choose <b>"Open in browser"</b>.';
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
