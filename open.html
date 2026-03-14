@@ -21,8 +21,8 @@ text-align:center;
 
 .tap-indicator{
 position:fixed;
-top:5px;      /* подняли выше */
-right:5px;
+top:5px;
+right:6px;
 text-align:center;
 z-index:9999;
 animation:floatArrow 1.6s infinite ease-in-out;
@@ -36,7 +36,7 @@ height:110px;
 }
 
 .menu-arrow path{
-stroke:#4da3ff;
+stroke:#ff5c7a;          /* цвет как у кнопки */
 stroke-width:10;
 fill:none;
 stroke-linecap:round;
@@ -45,13 +45,13 @@ filter:drop-shadow(0 4px 8px rgba(0,0,0,0.6));
 }
 
 .menu-arrow polygon{
-fill:#4da3ff;
+fill:#ff5c7a;            /* наконечник стрелки */
 }
 
 /* text */
 
 .arrow-text{
-margin-top:2px;
+margin-top:4px;
 font-size:15px;
 font-weight:700;
 line-height:1.2;
@@ -70,7 +70,7 @@ line-height:1.2;
 /* content */
 
 .container{
-padding-top:130px;
+padding-top:170px;      /* опустили контент ниже */
 max-width:420px;
 margin:auto;
 padding-left:20px;
