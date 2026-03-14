@@ -21,28 +21,28 @@ text-align:center;
 
 .tap-indicator{
 position:fixed;
-top:40px;
-right:10px;
+top:18px;
+right:8px;
 text-align:center;
 z-index:9999;
 animation:floatArrow 1.6s infinite ease-in-out;
 }
 
 .menu-arrow{
-width:75px;
-height:75px;
+width:95px;
+height:95px;
 margin:auto;
 }
 
 .menu-arrow path{
 stroke:#4da3ff;
-stroke-width:6;
+stroke-width:9;
 fill:none;
 stroke-linecap:round;
 stroke-linejoin:round;
-filter:drop-shadow(0 4px 6px rgba(0,0,0,0.5));
-stroke-dasharray:200;
-stroke-dashoffset:200;
+filter:drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+stroke-dasharray:260;
+stroke-dashoffset:260;
 animation:drawArrow 2s infinite;
 }
 
@@ -51,31 +51,26 @@ fill:#4da3ff;
 }
 
 .arrow-text{
-margin-top:4px;
-font-size:14px;
-font-weight:600;
+margin-top:6px;
+font-size:15px;
+font-weight:700;
+line-height:1.2;
 }
+
+/* animations */
 
 @keyframes drawArrow{
 
-0%{
-stroke-dashoffset:200;
-}
-
-50%{
-stroke-dashoffset:0;
-}
-
-100%{
-stroke-dashoffset:0;
-}
+0%{stroke-dashoffset:260;}
+50%{stroke-dashoffset:0;}
+100%{stroke-dashoffset:0;}
 
 }
 
 @keyframes floatArrow{
 
 0%{transform:translateY(0)}
-50%{transform:translateY(-7px)}
+50%{transform:translateY(-6px)}
 100%{transform:translateY(0)}
 
 }
@@ -104,7 +99,6 @@ font-size:17px;
 /* button */
 
 .btn{
-
 display:inline-block;
 padding:16px 34px;
 border-radius:30px;
@@ -114,9 +108,7 @@ text-decoration:none;
 font-weight:bold;
 font-size:18px;
 box-shadow:0 8px 24px rgba(255,70,120,0.55);
-
 animation:pulseBtn 2.8s infinite;
-
 }
 
 @keyframes pulseBtn{
@@ -206,8 +198,8 @@ note.innerHTML='If profiles do not open,<br>tap <b>•••</b> in the top righ
 <div class="tap-indicator">
 
 <svg class="menu-arrow" viewBox="0 0 120 120">
-<path d="M20 90 C40 70, 70 70, 95 35"></path>
-<polygon points="95,35 80,38 90,50"></polygon>
+<path d="M15 95 C45 70, 75 70, 105 25"></path>
+<polygon points="105,25 90,30 100,45"></polygon>
 </svg>
 
 <div class="arrow-text" id="arrowText">
