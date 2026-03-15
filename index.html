@@ -6,12 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Neue Liebe beginnt heute | Exklusive Partnersuche ab 35</title>
-<meta name="description" content="Exklusive Partnersuche für Singles ab 35. Stilvoll, seriös und diskret. Jetzt kostenlos entdecken.">
-
-<meta property="og:title" content="Neue Liebe beginnt heute">
-<meta property="og:description" content="Exklusive Partnersuche für anspruchsvolle Singles ab 35.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="images/IMAGE1.jpg">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -49,7 +43,9 @@
 <h1>Neue Liebe beginnt heute</h1>
 <p>Exklusive Partnersuche für anspruchsvolle Singles ab 35.</p>
 
-<a href="open.html" class="btn main-btn">Jetzt entdecken</a>
+<a href="open.html" class="btn main-btn">
+Jetzt entdecken
+</a>
 
 </header>
 
@@ -60,7 +56,9 @@
 </section>
 
 <section class="more-profiles">
-<a href="open.html" class="btn secondary-btn">Weitere Profile ansehen</a>
+<a href="open.html" class="btn secondary-btn">
+Weitere Profile ansehen
+</a>
 </section>
 
 <div class="trust-line">
@@ -162,18 +160,101 @@ statusEl.innerText=statuses[Math.floor(Math.random()*statuses.length)];
 // reveal animation
 
 setTimeout(()=>{
-
 document.querySelectorAll(".card").forEach((card,i)=>{
-
 setTimeout(()=>{
 card.classList.add("show");
 },i*120);
-
 });
-
 },200);
 
+// badge
+
+const firstCard=document.querySelector(".card");
+
+const badge=document.createElement("div");
+badge.className="card-badge";
+badge.innerText="🔥 Heute aktiv";
+
+firstCard.appendChild(badge);
+
 });
+
+</script>
+
+<script>
+
+const users=[
+
+"Anna (41) aus Berlin ist gerade online",
+"Sabine (38) aus Hamburg hat ein neues Profil erstellt",
+"Katrin (45) aus München sucht neue Bekanntschaften",
+"Petra (52) aus Köln ist jetzt aktiv",
+"Nicole (39) aus Frankfurt hat sich gerade angemeldet",
+
+"Monika (43) aus Stuttgart ist gerade online",
+"Heike (47) aus Düsseldorf hat ihr Profil aktualisiert",
+"Claudia (44) aus Leipzig sucht neue Kontakte",
+"Andrea (42) aus Bremen ist jetzt aktiv",
+"Martina (50) aus Dortmund hat sich angemeldet",
+
+"Julia (39) aus Nürnberg ist gerade online",
+"Birgit (48) aus Hannover sucht neue Bekanntschaften",
+"Verena (37) aus Bonn ist jetzt aktiv",
+"Nadine (41) aus Wiesbaden hat ein neues Profil erstellt",
+"Melanie (46) aus Karlsruhe ist online",
+
+"Silke (43) aus Essen ist gerade aktiv",
+"Daniela (40) aus Mannheim sucht Kontakte",
+"Tanja (45) aus Augsburg hat ihr Profil aktualisiert",
+"Susanne (49) aus Dresden ist online",
+"Yvonne (44) aus Bochum sucht neue Bekanntschaften"
+
+];
+
+function showNotification(){
+
+const el=document.getElementById("live-notification");
+
+el.innerText=users[Math.floor(Math.random()*users.length)];
+
+el.style.opacity="1";
+
+setTimeout(()=>{
+el.style.opacity="0";
+},4000);
+
+}
+
+showNotification();
+setInterval(showNotification,8000);
+
+</script>
+
+<script>
+
+let active=120+Math.floor(Math.random()*20);
+let profiles=30+Math.floor(Math.random()*10);
+let online=15+Math.floor(Math.random()*10);
+
+function updateStats(){
+
+active+=Math.floor(Math.random()*3)-1;
+profiles+=Math.floor(Math.random()*2);
+online+=Math.floor(Math.random()*3)-1;
+
+document.getElementById("active-members").innerText=
+active+" Mitglieder heute aktiv";
+
+document.getElementById("new-profiles").innerText=
+profiles+" neue Profile heute";
+
+document.getElementById("online-now").innerText=
+online+" gerade online";
+
+}
+
+updateStats();
+setInterval(updateStats,7000);
 
 </script>
 
