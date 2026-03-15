@@ -17,11 +17,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div id="live-notification"></div>
+
 <div class="hero-bg"></div>
 
 <div class="container">
@@ -29,9 +31,19 @@
 <header class="hero">
 
 <div class="activity-bar">
-<span id="active-members">128 Mitglieder heute aktiv</span>
-<span id="new-profiles">34 neue Profile heute</span>
-<span id="online-now">19 gerade online</span>
+
+<span id="active-members">
+128 Mitglieder heute aktiv
+</span>
+
+<span id="new-profiles">
+34 neue Profile heute
+</span>
+
+<span id="online-now">
+19 gerade online
+</span>
+
 </div>
 
 <h1>Neue Liebe beginnt heute</h1>
@@ -146,6 +158,20 @@ cityEl.innerText=city;
 statusEl.innerText=statuses[Math.floor(Math.random()*statuses.length)];
 
 });
+
+// reveal animation
+
+setTimeout(()=>{
+
+document.querySelectorAll(".card").forEach((card,i)=>{
+
+setTimeout(()=>{
+card.classList.add("show");
+},i*120);
+
+});
+
+},200);
 
 });
 
